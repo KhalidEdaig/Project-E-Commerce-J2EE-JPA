@@ -1,0 +1,33 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+version="2.0">
+<persistence-unit name="JEEJPA_Hibernate" transaction-type="RESOURCE_LOCAL">
+  <!-- Persistence provider -->
+  <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<!-- Entity classes -->
+		 <class>com.electrokhalid.modele.Article</class>
+		 <class>com.electrokhalid.modele.Marque</class>
+		 <class>com.electrokhalid.modele.Categorie</class>
+		 <class>com.electrokhalid.modele.Fourrnisseur</class>
+		 <class>com.electrokhalid.modele.Commande</class>
+		  <class>com.electrokhalid.modele.Client</class>
+		 <class>com.electrokhalid.modele.Ville</class>
+		 <class>com.electrokhalid.modele.Livraison</class>
+		 <class>com.electrokhalid.modele.Boutique</class>
+        <properties>
+            <!-- The JDBC driver of your database -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <!-- The JDBC URL to the database instance -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dbgboutique" />
+            <!-- The database username -->
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <!-- The database password -->
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL55Dialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+        </properties>
+</persistence-unit>
+
+</persistence>
